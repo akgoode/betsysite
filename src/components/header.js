@@ -7,7 +7,6 @@ import gatsbyLogo from '../images/gatsby-icon.png'
 
 const HeaderWrapper = styled.div`
   background: rebeccapurple;
-  margin-bottom: 1.45rem;
 `
 const HeaderContainer = styled.div`
   margin: 0 auto;
