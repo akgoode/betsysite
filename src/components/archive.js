@@ -1,5 +1,12 @@
 import React from 'react'
 import { useStaticQuery, graphql, Link } from 'gatsby'
+import styled from 'styled-components'
+
+const ArchiveList = styled.ul`
+  padding: 0;
+  margin: 0;
+  list-style: none;
+`
 
 const Archive = () => {
   const { allMarkdownRemark } = useStaticQuery(graphql`
@@ -21,7 +28,7 @@ const Archive = () => {
     <>
       <aside>
         <h3>Archive</h3>
-        <ul>
+        <ArchiveList>
           {allMarkdownRemark.edges.map(edge => (
             <li key={edge.node.frontmatter.slug}>
               <Link to={`${edge.node.frontmatter.slug}`}>
@@ -29,7 +36,7 @@ const Archive = () => {
               </Link>
             </li>
           ))}
-        </ul>
+        </ArchiveList>
       </aside>
     </>
   )
