@@ -11,7 +11,10 @@ const ArchiveList = styled.ul`
 const Archive = () => {
   const { allMarkdownRemark } = useStaticQuery(graphql`
     query BlogPostArchives {
-      allMarkdownRemark {
+      allMarkdownRemark(
+        limit: 10
+        sort: { order: DESC, fields: [frontmatter___date] }
+      ) {
         edges {
           node {
             frontmatter {
