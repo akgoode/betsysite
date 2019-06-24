@@ -3,7 +3,7 @@ import { useStaticQuery, graphql, Link } from 'gatsby'
 
 const Archive = () => {
   const { allMarkdownRemark } = useStaticQuery(graphql`
-    query BlogPostArchive {
+    query BlogPostArchives {
       allMarkdownRemark {
         edges {
           node {
